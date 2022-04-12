@@ -11771,23 +11771,61 @@ main {
 }
 
 .links__section {
-  background: url("../_assets/images/wall-grid-1920.jpg") no-repeat center center/calc(100% + 200px);
+  background-color: #f4f0ef;
+  overflow: hidden;
+}
+
+.links {
+  background: url("../_assets/images/wall-grid-1920.jpg") no-repeat center center/100%;
   z-index: 3;
   margin-bottom: -20vw;
 }
 @media (max-width: 767px) {
-  .links__section {
-    background: url("../_assets/images/wall-grid-360.jpg") no-repeat center center/cover;
+  .links {
+    background: url("../_assets/images/wall-grid-768.jpg") no-repeat center center/100%;
+    margin-left: calc((100vw - 768px) / 2);
+    width: 768px;
+    height: 1023px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .links__section {
-    background: url("../_assets/images/wall-grid-768.jpg") no-repeat center center/cover;
+  .links {
+    background: url("../_assets/images/wall-grid-1024.jpg") no-repeat center center/100%;
+    margin-left: calc((100vw - 1024px) / 2);
+    width: 1024px;
+    height: 1960px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .links {
+    background: url("../_assets/images/wall-grid-1366.jpg") no-repeat center center/100%;
+    margin-left: calc((100vw - 1366px) / 2);
+    width: 1366px;
+    height: 2559px;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1550px) {
+  .links {
+    background: url("../_assets/images/wall-grid-1920.jpg") no-repeat center center/100%;
+    margin-left: calc((100vw - 1920px) / 2);
+    width: 1920px;
+    height: 2559px;
+  }
+}
+@media (min-width: 1551px) and (max-width: 1920px) {
+  .links {
+    background: url("../_assets/images/wall-grid-1920.jpg") no-repeat center center/100%;
+    margin-left: calc((100vw - 1920px) / 2);
+    width: 1920px;
+    height: 2559px;
   }
 }
 @media (min-width: 1921px) {
-  .links__section {
-    background: url("../_assets/images/wall-grid-1920.jpg") no-repeat center center/calc(107%);
+  .links {
+    background: url("../_assets/images/wall-grid-3400.jpg") no-repeat center center/100%;
+    margin-left: calc((100vw - 3400px) / 2);
+    width: 3400px;
+    height: 2544px;
   }
 }
 
@@ -11810,10 +11848,10 @@ main {
     padding-top: 100px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
   .links__intro {
-    font-size: 20px;
-    padding-top: 50px;
+    font-size: 30px;
+    padding-top: 100px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
@@ -11846,9 +11884,9 @@ main {
     padding-top: 80px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
   .links__intro__span {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
@@ -11868,62 +11906,12 @@ main {
 }
 
 .links__wrapper {
-  height: calc(133vw - 100px);
-  padding-top: 100px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  width: 50%;
-  margin: 0 auto;
-  justify-items: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
   position: relative;
+  height: 100%;
 }
-@media (max-width: 767px) {
-  .links__wrapper {
-    height: 240vw;
-    width: 80%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .links__wrapper {
-    height: 200vw;
-    width: 70%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1366px) {
-  .links__wrapper {
-    padding-top: 120px;
-  }
-}
-@media (min-width: 1367px) and (max-width: 1550px) {
-  .links__wrapper {
-    padding-top: 100px;
-  }
-}
-@media (min-width: 1551px) and (max-width: 1920px) {
-  .links__wrapper {
-    padding-top: 80px;
-  }
-}
-@media (min-width: 1921px) {
-  .links__wrapper {
-    padding-top: 80px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
-  .links__wrapper {
-    padding-top: 100px;
-  }
-}
-@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 600px) {
-  .links__wrapper {
-    padding-top: 100px;
-  }
+.links__wrapper img {
+  max-height: initial;
+  max-width: initial;
 }
 
 .links__style {
@@ -11938,40 +11926,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__moda {
-    left: -10px;
-    top: -85px;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    left: 256px;
+    top: 88px;
+    width: 91px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__moda {
-    left: -40px;
-    top: -120px;
+    left: 240px;
+    top: 210px;
+    width: 191px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__moda {
-    left: 5px;
-    top: -90px;
+    left: 355px;
+    top: 260px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__moda {
-    left: 10px;
-    top: -100px;
+    left: 635px;
+    top: 275px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__moda {
-    left: 20px;
-    top: -90px;
+    left: 635px;
+    top: 235px;
   }
 }
 @media (min-width: 1921px) {
   .links__moda {
-    left: 2.75vw;
-    top: 1vw;
+    left: 1370px;
+    top: 240px;
   }
 }
 
@@ -11989,40 +11977,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__moda__hover {
-    left: -10px;
-    top: -85px;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    left: 256px;
+    top: 88px;
+    width: 91px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__moda__hover {
-    left: -40px;
-    top: -120px;
+    left: 240px;
+    top: 210px;
+    width: 191px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__moda__hover {
-    left: 5px;
-    top: -90px;
+    left: 355px;
+    top: 260px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__moda__hover {
-    left: 10px;
-    top: -100px;
+    left: 635px;
+    top: 275px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__moda__hover {
-    left: 20px;
-    top: -90px;
+    left: 635px;
+    top: 235px;
   }
 }
 @media (min-width: 1921px) {
   .links__moda__hover {
-    left: 2.75vw;
-    top: 1vw;
+    left: 1370px;
+    top: 240px;
   }
 }
 
@@ -12033,38 +12021,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__beauty {
-    left: 0px;
-    top: -30px;
+    left: 392px;
+    top: 125px;
+    width: 126px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__beauty {
-    left: 15px;
-    top: -10px;
+    left: 538px;
+    top: 300px;
+    width: 236px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__beauty {
-    left: 20px;
-    top: 10px;
+    left: 765px;
+    top: 387px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__beauty {
-    left: 10px;
-    top: 30px;
+    left: 1040px;
+    top: 400px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__beauty {
-    left: 10px;
-    top: 60px;
+    left: 1040px;
+    top: 360px;
   }
 }
 @media (min-width: 1921px) {
   .links__beauty {
-    left: 0.75vw;
-    top: 8vw;
+    left: 1780px;
+    top: 360px;
   }
 }
 
@@ -12082,38 +12072,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__beauty__hover {
-    left: 0px;
-    top: -30px;
+    left: 392px;
+    top: 125px;
+    width: 126px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__beauty__hover {
-    left: 15px;
-    top: -10px;
+    left: 538px;
+    top: 300px;
+    width: 236px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__beauty__hover {
-    left: 20px;
-    top: 10px;
+    left: 765px;
+    top: 387px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__beauty__hover {
-    left: 10px;
-    top: 30px;
+    left: 1040px;
+    top: 400px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__beauty__hover {
-    left: 10px;
-    top: 60px;
+    left: 1040px;
+    top: 360px;
   }
 }
 @media (min-width: 1921px) {
   .links__beauty__hover {
-    left: 0.75vw;
-    top: 8vw;
+    left: 1780px;
+    top: 360px;
   }
 }
 
@@ -12121,45 +12113,43 @@ main {
   left: 160px;
   top: -80px;
   position: absolute;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 @media (max-width: 767px) {
   .links__tretmani {
-    left: 35px;
-    top: -85px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    left: 283px;
+    top: 227px;
+    width: 125px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__tretmani {
-    left: 65px;
-    top: -100px;
+    left: 305px;
+    top: 500px;
+    width: 245px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__tretmani {
-    left: 80px;
-    top: -60px;
+    left: 448px;
+    top: 660px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__tretmani {
-    left: 120px;
-    top: -90px;
+    left: 725px;
+    top: 675px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__tretmani {
-    left: 140px;
-    top: -100px;
+    left: 725px;
+    top: 635px;
   }
 }
 @media (min-width: 1921px) {
   .links__tretmani {
-    left: 8.3vw;
-    top: -1.8vw;
+    left: 1465px;
+    top: 630px;
   }
 }
 
@@ -12170,8 +12160,6 @@ main {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
   z-index: 2;
 }
 .links__tretmani__hover:hover {
@@ -12179,40 +12167,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__tretmani__hover {
-    left: 35px;
-    top: -85px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    left: 283px;
+    top: 227px;
+    width: 125px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__tretmani__hover {
-    left: 65px;
-    top: -100px;
+    left: 305px;
+    top: 500px;
+    width: 245px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__tretmani__hover {
-    left: 80px;
-    top: -60px;
+    left: 448px;
+    top: 660px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__tretmani__hover {
-    left: 120px;
-    top: -90px;
+    left: 725px;
+    top: 675px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__tretmani__hover {
-    left: 140px;
-    top: -100px;
+    left: 725px;
+    top: 635px;
   }
 }
 @media (min-width: 1921px) {
   .links__tretmani__hover {
-    left: 8.3vw;
-    top: -1.8vw;
+    left: 1465px;
+    top: 630px;
   }
 }
 
@@ -12220,45 +12208,43 @@ main {
   left: 50px;
   top: 50px;
   position: absolute;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 @media (max-width: 767px) {
   .links__putovanja {
-    left: 15px;
-    top: -35px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    left: 406px;
+    top: 272px;
+    width: 132px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__putovanja {
-    left: 45px;
-    top: -5px;
+    left: 555px;
+    top: 585px;
+    width: 252px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__putovanja {
-    left: 40px;
-    top: 20px;
+    left: 790px;
+    top: 790px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__putovanja {
-    left: 40px;
-    top: 20px;
+    left: 1070px;
+    top: 800px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__putovanja {
-    left: 50px;
-    top: 30px;
+    left: 1070px;
+    top: 760px;
   }
 }
 @media (min-width: 1921px) {
   .links__putovanja {
-    left: 2.75vw;
-    top: 5vw;
+    left: 1807px;
+    top: 760px;
   }
 }
 
@@ -12269,8 +12255,6 @@ main {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
   z-index: 2;
 }
 .links__putovanja__hover:hover {
@@ -12278,40 +12262,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__putovanja__hover {
-    left: 15px;
-    top: -35px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    left: 406px;
+    top: 272px;
+    width: 132px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__putovanja__hover {
-    left: 45px;
-    top: -5px;
+    left: 555px;
+    top: 585px;
+    width: 252px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__putovanja__hover {
-    left: 40px;
-    top: 20px;
+    left: 790px;
+    top: 790px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__putovanja__hover {
-    left: 40px;
-    top: 20px;
+    left: 1070px;
+    top: 800px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__putovanja__hover {
-    left: 50px;
-    top: 30px;
+    left: 1070px;
+    top: 760px;
   }
 }
 @media (min-width: 1921px) {
   .links__putovanja__hover {
-    left: 2.75vw;
-    top: 5vw;
+    left: 1807px;
+    top: 760px;
   }
 }
 
@@ -12322,28 +12306,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__shopping {
-    left: -12px;
-    top: -105px;
+    left: 249px;
+    top: 371px;
+    width: 103px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__shopping {
-    left: -30px;
-    top: -120px;
+    left: 230px;
+    top: 782px;
+    width: 213px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__shopping {
-    left: 0px;
-    top: -50px;
+    left: 350px;
+    top: 1060px;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1550px) {
+  .links__shopping {
+    left: 630px;
+    top: 1080px;
+  }
+}
+@media (min-width: 1551px) and (max-width: 1920px) {
+  .links__shopping {
+    left: 630px;
+    top: 1040px;
   }
 }
 @media (min-width: 1921px) {
   .links__shopping {
-    left: 2.2vw;
-    top: -4.5vw;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    left: 1367px;
+    top: 1040px;
   }
 }
 
@@ -12361,28 +12357,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__shopping__hover {
-    left: -12px;
-    top: -105px;
+    left: 249px;
+    top: 371px;
+    width: 103px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__shopping__hover {
-    left: -30px;
-    top: -120px;
+    left: 230px;
+    top: 782px;
+    width: 213px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__shopping__hover {
-    left: 0px;
-    top: -50px;
+    left: 350px;
+    top: 1060px;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1550px) {
+  .links__shopping__hover {
+    left: 630px;
+    top: 1080px;
+  }
+}
+@media (min-width: 1551px) and (max-width: 1920px) {
+  .links__shopping__hover {
+    left: 630px;
+    top: 1040px;
   }
 }
 @media (min-width: 1921px) {
   .links__shopping__hover {
-    left: 2.2vw;
-    top: -4.5vw;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    left: 1367px;
+    top: 1040px;
   }
 }
 
@@ -12393,40 +12401,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__hrana {
-    left: 10px;
-    top: -50px;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    left: 409px;
+    top: 422px;
+    width: 109px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__hrana {
-    left: 25px;
-    top: -10px;
+    left: 558px;
+    top: 889px;
+    width: 219px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__hrana {
-    left: 30px;
-    top: 30px;
+    left: 800px;
+    top: 1205px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__hrana {
-    left: 30px;
-    top: 10px;
+    left: 1070px;
+    top: 1230px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__hrana {
-    left: 20px;
-    top: 20px;
+    left: 1070px;
+    top: 1190px;
   }
 }
 @media (min-width: 1921px) {
   .links__hrana {
-    left: 2vw;
-    top: 3vw;
+    left: 1810px;
+    top: 1180px;
   }
 }
 
@@ -12444,40 +12452,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__hrana__hover {
-    left: 10px;
-    top: -50px;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    left: 409px;
+    top: 422px;
+    width: 109px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__hrana__hover {
-    left: 25px;
-    top: -10px;
+    left: 558px;
+    top: 889px;
+    width: 219px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__hrana__hover {
-    left: 30px;
-    top: 30px;
+    left: 800px;
+    top: 1205px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__hrana__hover {
-    left: 30px;
-    top: 10px;
+    left: 1070px;
+    top: 1230px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__hrana__hover {
-    left: 20px;
-    top: 20px;
+    left: 1070px;
+    top: 1190px;
   }
 }
 @media (min-width: 1921px) {
   .links__hrana__hover {
-    left: 2vw;
-    top: 3vw;
+    left: 1810px;
+    top: 1180px;
   }
 }
 
@@ -12485,45 +12493,43 @@ main {
   left: 140px;
   top: -140px;
   position: absolute;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 @media (max-width: 767px) {
   .links__zdravlje {
-    left: 30px;
-    top: -105px;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    left: 276px;
+    top: 524px;
+    width: 125px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__zdravlje {
-    left: 50px;
-    top: -100px;
+    left: 299px;
+    top: 1090px;
+    width: 235px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__zdravlje {
-    left: 70px;
-    top: -30px;
+    left: 430px;
+    top: 1470px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__zdravlje {
-    left: 110px;
-    top: -120px;
+    left: 710px;
+    top: 1490px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__zdravlje {
-    left: 120px;
-    top: -140px;
+    left: 710px;
+    top: 1450px;
   }
 }
 @media (min-width: 1921px) {
   .links__zdravlje {
-    left: 7.2vw;
-    top: -7vw;
+    left: 1455px;
+    top: 1450px;
   }
 }
 
@@ -12534,8 +12540,6 @@ main {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
   z-index: 2;
 }
 .links__zdravlje__hover:hover {
@@ -12543,40 +12547,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__zdravlje__hover {
-    left: 30px;
-    top: -105px;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    left: 276px;
+    top: 524px;
+    width: 125px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__zdravlje__hover {
-    left: 50px;
-    top: -100px;
+    left: 299px;
+    top: 1090px;
+    width: 235px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__zdravlje__hover {
-    left: 70px;
-    top: -30px;
+    left: 430px;
+    top: 1470px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__zdravlje__hover {
-    left: 110px;
-    top: -120px;
+    left: 710px;
+    top: 1490px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__zdravlje__hover {
-    left: 120px;
-    top: -140px;
+    left: 710px;
+    top: 1450px;
   }
 }
 @media (min-width: 1921px) {
   .links__zdravlje__hover {
-    left: 7.2vw;
-    top: -7vw;
+    left: 1455px;
+    top: 1450px;
   }
 }
 
@@ -12584,50 +12588,43 @@ main {
   left: 30px;
   top: 160px;
   position: absolute;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 @media (max-width: 767px) {
   .links__tech {
-    left: 7px;
-    top: 5px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@media (min-width: 1025px) and (max-width: 1366px) {
-  .links__tech {
-    left: 30px;
-    top: 150px;
+    left: 399px;
+    top: 622px;
+    width: 128px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__tech {
-    left: 27px;
-    top: 120px;
+    left: 538px;
+    top: 1290px;
+    width: 257px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .links__tech {
+    left: 770px;
+    top: 1750px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__tech {
-    left: 30px;
-    top: 129px;
+    left: 1045px;
+    top: 1760px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__tech {
-    left: 30px;
-    top: 140px;
+    left: 1045px;
+    top: 1720px;
   }
 }
 @media (min-width: 1921px) {
   .links__tech {
-    left: 1vw;
-    top: 8vw;
-  }
-}
-@media (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
-  .links__tech {
-    top: 170px;
+    left: 1785px;
+    top: 1725px;
   }
 }
 
@@ -12638,8 +12635,6 @@ main {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   z-index: 2;
 }
 .links__tech__hover:hover {
@@ -12647,45 +12642,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__tech__hover {
-    left: 7px;
-    top: 5px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    left: 399px;
+    top: 622px;
+    width: 128px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__tech__hover {
-    left: 27px;
-    top: 120px;
+    left: 538px;
+    top: 1290px;
+    width: 257px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__tech__hover {
-    left: 30px;
-    top: 150px;
+    left: 770px;
+    top: 1750px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__tech__hover {
-    left: 30px;
-    top: 129px;
+    left: 1045px;
+    top: 1760px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__tech__hover {
-    left: 30px;
-    top: 140px;
+    left: 1045px;
+    top: 1720px;
   }
 }
 @media (min-width: 1921px) {
   .links__tech__hover {
-    left: 1vw;
-    top: 8vw;
-  }
-}
-@media (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
-  .links__tech__hover {
-    top: 170px;
+    left: 1785px;
+    top: 1725px;
   }
 }
 
@@ -12696,40 +12686,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__sport {
-    left: -10px;
-    top: -120px;
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    left: 249px;
+    top: 671px;
+    width: 102px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__sport {
-    left: -33px;
-    top: -95px;
+    left: 231px;
+    top: 1395px;
+    width: 202px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__sport {
-    left: 0px;
-    top: -10px;
+    left: 340px;
+    top: 1880px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__sport {
-    left: 0;
-    top: -120px;
+    left: 620px;
+    top: 1900px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__sport {
-    left: 10px;
-    top: -180px;
+    left: 620px;
+    top: 1860px;
   }
 }
 @media (min-width: 1921px) {
   .links__sport {
-    left: 2vw;
-    top: -9vw;
+    left: 1360px;
+    top: 1860px;
   }
 }
 
@@ -12747,40 +12737,40 @@ main {
 }
 @media (max-width: 767px) {
   .links__sport__hover {
-    left: -10px;
-    top: -120px;
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    left: 249px;
+    top: 671px;
+    width: 102px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .links__sport__hover {
-    left: -33px;
-    top: -95px;
+    left: 231px;
+    top: 1395px;
+    width: 202px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .links__sport__hover {
-    left: 0px;
-    top: -10px;
+    left: 340px;
+    top: 1880px;
   }
 }
 @media (min-width: 1367px) and (max-width: 1550px) {
   .links__sport__hover {
-    left: 0;
-    top: -120px;
+    left: 620px;
+    top: 1900px;
   }
 }
 @media (min-width: 1551px) and (max-width: 1920px) {
   .links__sport__hover {
-    left: 10px;
-    top: -180px;
+    left: 620px;
+    top: 1860px;
   }
 }
 @media (min-width: 1921px) {
   .links__sport__hover {
-    left: 2vw;
-    top: -9vw;
+    left: 1360px;
+    top: 1860px;
   }
 }
 

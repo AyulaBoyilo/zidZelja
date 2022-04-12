@@ -1,20 +1,20 @@
 // Window resize
-var resizeTimer;
+// var resizeTimer;
 
-window.addEventListener('resize', function() {
+// window.addEventListener('resize', function() {
 
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function() {
+//   clearTimeout(resizeTimer);
+//   resizeTimer = setTimeout(function() {
   
-    location.reload();
+//     location.reload();
        
-  }, 250);
+//   }, 250);
 
-});
+// });
 
 // WALL
 // GSAP scroll
-var container = document.querySelector(".links__section");
+var container = document.querySelector(".links");
 
 gsap.to(container, {
   y: -.2 * document.documentElement.clientWidth,
@@ -27,20 +27,20 @@ gsap.to(container, {
 });
 
 // Mouseover parallax
-if (document.documentElement.clientWidth > 1024) {
-  $(document).ready(function() {
-    var movementStrength = 25;
-    var height = movementStrength * .5 / $(window).height();
-    var width = movementStrength  / $(window).width();
-    $(".links__section").mousemove(function(e){
-              var pageX = e.pageX - ($(window).width() / 2);
-              var pageY = e.pageY - ($(window).height() / 2);
-              var newvalueX = width * pageX * -1 - 100;
-              var newvalueY = height * pageY * -1 - 20;
-              $('.links__section').css("background-position", newvalueX+"px     "+newvalueY+"px");
-    });
-  });
-}
+// if (document.documentElement.clientWidth > 1024) {
+//   $(document).ready(function() {
+//     var movementStrength = 25;
+//     var height = movementStrength * .5 / $(window).height();
+//     var width = movementStrength  / $(window).width();
+//     $(".links__section").mousemove(function(e){
+//               var pageX = e.pageX - ($(window).width() / 2);
+//               var pageY = e.pageY - ($(window).height() / 2);
+//               var newvalueX = width * pageX * -1 - 100;
+//               var newvalueY = height * pageY * -1 - 20;
+//               $('.links__section').css("background-position", newvalueX+"px     "+newvalueY+"px");
+//     });
+//   });
+// }
 
 // $(document).ready(function() {
 //   var movementStrength = 25;

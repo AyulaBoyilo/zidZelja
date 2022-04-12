@@ -303,21 +303,56 @@ main {
 }
 
 .links__section {
-  background: url('../_assets/images/wall-grid-1920.jpg') no-repeat center center / calc(100% + 200px);
+  background-color: $wall-bg;
+  overflow: hidden;
+}
+
+.links {
+  background: url('../_assets/images/wall-grid-1920.jpg') no-repeat center center / 100%;
   z-index: 3;
   margin-bottom: -20vw;
   // height: 113vw;
 
   @include for-phone {
-    background: url('../_assets/images/wall-grid-360.jpg') no-repeat center center / cover;
+    background: url('../_assets/images/wall-grid-768.jpg') no-repeat center center / 100%;
+    margin-left: calc((100vw - 768px) / 2);
+    width: 768px;
+    height: 1023px;
   }
 
   @include for-tablet {
-    background: url('../_assets/images/wall-grid-768.jpg') no-repeat center center / cover;
+    background: url('../_assets/images/wall-grid-1024.jpg') no-repeat center center / 100%;
+    margin-left: calc((100vw - 1024px) / 2);
+    width: 1024px;
+    height: 1960px;
+  }
+
+  @include for-desktop-only {
+    background: url('../_assets/images/wall-grid-1366.jpg') no-repeat center center / 100%;
+    margin-left: calc((100vw - 1366px) / 2);
+    width: 1366px;
+    height: 2559px;
+  }
+
+  @include for-widescreen {
+    background: url('../_assets/images/wall-grid-1920.jpg') no-repeat center center / 100%;
+    margin-left: calc((100vw - 1920px) / 2);
+    width: 1920px;
+    height: 2559px;
+  }
+
+  @include for-fullhd {
+    background: url('../_assets/images/wall-grid-1920.jpg') no-repeat center center / 100%;
+    margin-left: calc((100vw - 1920px) / 2);
+    width: 1920px;
+    height: 2559px;
   }
 
   @include for-ultrahd {
-    background: url('../_assets/images/wall-grid-1920.jpg') no-repeat center center / calc(107%);
+    background: url('../_assets/images/wall-grid-3400.jpg') no-repeat center center / 100%;
+    margin-left: calc((100vw - 3400px) / 2);
+    width: 3400px;
+    height: 2544px;
   }
 }
 
@@ -338,9 +373,9 @@ main {
     padding-top: 100px;
   }
 
-  @include for-desktop {
-    font-size: 20px;
-    padding-top: 50px;
+  @include for-desktop-only {
+    font-size: 30px;
+    padding-top: 100px;
   }
 
   @include for-widescreen {
@@ -369,8 +404,8 @@ main {
     padding-top: 80px;
   }
 
-  @include for-desktop {
-    font-size: 20px;
+  @include for-desktop-only {
+    font-size: 30px;
   }
 
   @include for-widescreen {
@@ -387,53 +422,63 @@ main {
 }
 
 .links__wrapper {
-  height: calc(133vw - 100px);
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 50%;
-  margin: 0 auto;
-  justify-items: center;
-  align-content: space-around;
   position: relative;
+  height: 100%;
 
-  
-  @include for-phone {
-    height: 240vw;
-    width: 80%;
-  }
-
-  @include for-tablet {
-    height: 200vw;
-    width: 70%;
-  }
-  
-  @include for-desktop-only {
-    padding-top: 120px;
-  }
-  
-  @include for-widescreen {
-    padding-top: 100px;
-  }
-  
-  @include for-fullhd {
-    padding-top: 80px;
-  }
-  
-  @include for-ultrahd {
-    padding-top: 80px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-  }
-
-  @include for-tablet-landscape {
-    padding-top: 100px;
-  }
-
-  @include for-phone-landscape {
-    padding-top: 100px;
+  img {
+    max-height: initial;
+    max-width: initial;
   }
 }
+
+// .links__wrapper {
+//   height: calc(133vw - 100px);
+//   padding-top: 100px;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   width: 50%;
+//   margin: 0 auto;
+//   justify-items: center;
+//   align-content: space-around;
+//   position: relative;
+
+  
+//   @include for-phone {
+//     height: 240vw;
+//     width: 80%;
+//   }
+
+//   @include for-tablet {
+//     height: 200vw;
+//     width: 70%;
+//   }
+  
+//   @include for-desktop-only {
+//     padding-top: 120px;
+//   }
+  
+//   @include for-widescreen {
+//     padding-top: 100px;
+//   }
+  
+//   @include for-fullhd {
+//     padding-top: 80px;
+//   }
+  
+//   @include for-ultrahd {
+//     padding-top: 80px;
+//     padding-right: 50px;
+//     padding-bottom: 50px;
+//   }
+
+//   @include for-tablet-landscape {
+//     padding-top: 100px;
+//   }
+
+//   @include for-phone-landscape {
+//     padding-top: 100px;
+//   }
+// }
 
 .links__style {
   position: relative;
@@ -446,34 +491,35 @@ main {
   position: absolute;
 
   @include for-phone {
-    left: -10px;
-    top: -85px;
-    transform: scale(.8);
+    left: 256px;
+    top: 88px;
+    width: 91px;
   }
 
   @include for-tablet {
-    left: -40px;
-    top: -120px;
+    left: 240px;
+    top: 210px;
+    width: 191px;
   }
 
   @include for-desktop-only {
-    left: 5px;
-    top: -90px;
+    left: 355px;
+    top: 260px;
   }
 
   @include for-widescreen {
-    left: 10px;
-    top: -100px;
+    left: 635px;
+    top: 275px;
   }
 
   @include for-fullhd {
-    left: 20px;
-    top: -90px;
+    left: 635px;
+    top: 235px;
   }
 
   @include for-ultrahd {
-    left: 2.75vw;
-    top: 1vw;
+    left: 1370px;
+    top: 240px;
   }
 }
 
@@ -490,34 +536,35 @@ main {
   }
 
   @include for-phone {
-    left: -10px;
-    top: -85px;
-    transform: scale(.8);
+    left: 256px;
+    top: 88px;
+    width: 91px;
   }
 
   @include for-tablet {
-    left: -40px;
-    top: -120px;
+    left: 240px;
+    top: 210px;
+    width: 191px;
   }
 
   @include for-desktop-only {
-    left: 5px;
-    top: -90px;
+    left: 355px;
+    top: 260px;
   }
 
   @include for-widescreen {
-    left: 10px;
-    top: -100px;
+    left: 635px;
+    top: 275px;
   }
 
   @include for-fullhd {
-    left: 20px;
-    top: -90px;
+    left: 635px;
+    top: 235px;
   }
 
   @include for-ultrahd {
-    left: 2.75vw;
-    top: 1vw;
+    left: 1370px;
+    top: 240px;
   }
 }
 
@@ -527,33 +574,35 @@ main {
   position: absolute;
 
   @include for-phone {
-    left: 0px;
-    top: -30px;
+    left: 392px;
+    top: 125px;
+    width: 126px;
   }
 
   @include for-tablet {
-    left: 15px;
-    top: -10px;
+    left: 538px;
+    top: 300px;
+    width: 236px;
   }
 
   @include for-desktop-only {
-    left: 20px;
-    top: 10px;
+    left: 765px;
+    top: 387px;
   }
 
   @include for-widescreen {
-    left: 10px;
-    top: 30px;
+    left: 1040px;
+    top: 400px;
   }
 
   @include for-fullhd {
-    left: 10px;
-    top: 60px;
+    left: 1040px;
+    top: 360px;
   }
 
   @include for-ultrahd {
-    left: .75vw;
-    top: 8vw;
+    left: 1780px;
+    top: 360px;
   }
 }
 
@@ -570,33 +619,35 @@ main {
   }
 
   @include for-phone {
-    left: 0px;
-    top: -30px;
+    left: 392px;
+    top: 125px;
+    width: 126px;
   }
 
   @include for-tablet {
-    left: 15px;
-    top: -10px;
+    left: 538px;
+    top: 300px;
+    width: 236px;
   }
 
   @include for-desktop-only {
-    left: 20px;
-    top: 10px;
+    left: 765px;
+    top: 387px;
   }
 
   @include for-widescreen {
-    left: 10px;
-    top: 30px;
+    left: 1040px;
+    top: 400px;
   }
 
   @include for-fullhd {
-    left: 10px;
-    top: 60px;
+    left: 1040px;
+    top: 360px;
   }
 
   @include for-ultrahd {
-    left: .75vw;
-    top: 8vw;
+    left: 1780px;
+    top: 360px;
   }
 }
 
@@ -604,37 +655,38 @@ main {
   left: 160px;
   top: -80px;
   position: absolute;
-  transform: scale(1.1);
+  // transform: scale(1.1);
 
   @include for-phone {
-    left: 35px;
-    top: -85px;
-    transform: scale(1);
+    left: 283px;
+    top: 227px;
+    width: 125px;
   }
 
   @include for-tablet {
-    left: 65px;
-    top: -100px;
+    left: 305px;
+    top: 500px;
+    width: 245px;
   }
 
   @include for-desktop-only {
-    left: 80px;
-    top: -60px;
+    left: 448px;
+    top: 660px;
   }
 
   @include for-widescreen{
-    left: 120px;
-    top: -90px;
+    left: 725px;
+    top: 675px;
   }
 
   @include for-fullhd {
-    left: 140px;
-    top: -100px;
+    left: 725px;
+    top: 635px;
   }
 
   @include for-ultrahd {
-    left: 8.3vw;
-    top: -1.8vw;
+    left: 1465px;
+    top: 630px;
   }
 }
 
@@ -644,7 +696,7 @@ main {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  transform: scale(1.1);
+  // transform: scale(1.1);
   z-index: 2;
 
   &:hover {
@@ -652,34 +704,35 @@ main {
   }
 
   @include for-phone {
-    left: 35px;
-    top: -85px;
-    transform: scale(1);
+    left: 283px;
+    top: 227px;
+    width: 125px;
   }
 
   @include for-tablet {
-    left: 65px;
-    top: -100px;
+    left: 305px;
+    top: 500px;
+    width: 245px;
   }
 
   @include for-desktop-only {
-    left: 80px;
-    top: -60px;
+    left: 448px;
+    top: 660px;
   }
 
   @include for-widescreen{
-    left: 120px;
-    top: -90px;
+    left: 725px;
+    top: 675px;
   }
 
   @include for-fullhd {
-    left: 140px;
-    top: -100px;
+    left: 725px;
+    top: 635px;
   }
 
   @include for-ultrahd {
-    left: 8.3vw;
-    top: -1.8vw;
+    left: 1465px;
+    top: 630px;
   }
 }
 
@@ -687,37 +740,38 @@ main {
   left: 50px;
   top: 50px;
   position: absolute;
-  transform: scale(1.1);
+  // transform: scale(1.1);
 
   @include for-phone {
-    left: 15px;
-    top: -35px;
-    transform: scale(1);
+    left: 406px;
+    top: 272px;
+    width: 132px;
   }
 
   @include for-tablet {
-    left: 45px;
-    top: -5px;
+    left: 555px;
+    top: 585px;
+    width: 252px;
   }
 
   @include for-desktop-only {
-    left: 40px;
-    top: 20px;
+    left: 790px;
+    top: 790px;
   }
 
   @include for-widescreen {
-    left: 40px;
-    top: 20px;
+    left: 1070px;
+    top: 800px;
   }
 
   @include for-fullhd {
-    left: 50px;
-    top: 30px;
+    left: 1070px;
+    top: 760px;
   }
 
   @include for-ultrahd {
-    left: 2.75vw;
-    top: 5vw;
+    left: 1807px;
+    top: 760px;
   }
 }
 
@@ -727,7 +781,7 @@ main {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  transform: scale(1.1);
+  // transform: scale(1.1);
   z-index: 2;
 
   &:hover {
@@ -735,34 +789,35 @@ main {
   }
 
   @include for-phone {
-    left: 15px;
-    top: -35px;
-    transform: scale(1);
+    left: 406px;
+    top: 272px;
+    width: 132px;
   }
 
   @include for-tablet {
-    left: 45px;
-    top: -5px;
+    left: 555px;
+    top: 585px;
+    width: 252px;
   }
 
   @include for-desktop-only {
-    left: 40px;
-    top: 20px;
+    left: 790px;
+    top: 790px;
   }
 
   @include for-widescreen {
-    left: 40px;
-    top: 20px;
+    left: 1070px;
+    top: 800px;
   }
 
   @include for-fullhd {
-    left: 50px;
-    top: 30px;
+    left: 1070px;
+    top: 760px;
   }
 
   @include for-ultrahd {
-    left: 2.75vw;
-    top: 5vw;
+    left: 1807px;
+    top: 760px;
   }
 }
 
@@ -772,24 +827,35 @@ main {
   position: absolute;
 
   @include for-phone {
-    left: -12px;
-    top: -105px;
+    left: 249px;
+    top: 371px;
+    width: 103px;
   }
 
   @include for-tablet {
-    left: -30px;
-    top: -120px;
+    left: 230px;
+    top: 782px;
+    width: 213px;
   }
 
   @include for-desktop-only {
-    left: 0px;
-    top: -50px;
+    left: 350px;
+    top: 1060px;
+  }
+
+  @include for-widescreen {
+    left: 630px;
+    top: 1080px;
+  }
+
+  @include for-fullhd {
+    left: 630px;
+    top: 1040px;
   }
 
   @include for-ultrahd {
-    left: 2.2vw;
-    top: -4.5vw;
-    transform: scale(1.1);
+    left: 1367px;
+    top: 1040px;
   }
 }
 
@@ -806,24 +872,35 @@ main {
   }
 
   @include for-phone {
-    left: -12px;
-    top: -105px;
+    left: 249px;
+    top: 371px;
+    width: 103px;
   }
 
   @include for-tablet {
-    left: -30px;
-    top: -120px;
+    left: 230px;
+    top: 782px;
+    width: 213px;
   }
 
   @include for-desktop-only {
-    left: 0px;
-    top: -50px;
+    left: 350px;
+    top: 1060px;
+  }
+
+  @include for-widescreen {
+    left: 630px;
+    top: 1080px;
+  }
+
+  @include for-fullhd {
+    left: 630px;
+    top: 1040px;
   }
 
   @include for-ultrahd {
-    left: 2.2vw;
-    top: -4.5vw;
-    transform: scale(1.1);
+    left: 1367px;
+    top: 1040px;
   }
 }
 
@@ -833,34 +910,35 @@ main {
   position: absolute;
 
   @include for-phone {
-    left: 10px;
-    top: -50px;
-    transform: scale(.9);
+    left: 409px;
+    top: 422px;
+    width: 109px;
   }
 
   @include for-tablet {
-    left: 25px;
-    top: -10px;
+    left: 558px;
+    top: 889px;
+    width: 219px;
   }
 
   @include for-desktop-only {
-    left: 30px;
-    top: 30px;
+    left: 800px;
+    top: 1205px;
   }
 
   @include for-widescreen {
-    left: 30px;
-    top: 10px;
+    left: 1070px;
+    top: 1230px;
   }
 
   @include for-fullhd {
-    left: 20px;
-    top: 20px;
+    left: 1070px;
+    top: 1190px;
   }
 
   @include for-ultrahd {
-    left: 2vw;
-    top: 3vw;
+    left: 1810px;
+    top: 1180px;
   }
 }
 
@@ -877,34 +955,35 @@ main {
   }
 
   @include for-phone {
-    left: 10px;
-    top: -50px;
-    transform: scale(.9);
+    left: 409px;
+    top: 422px;
+    width: 109px;
   }
 
   @include for-tablet {
-    left: 25px;
-    top: -10px;
+    left: 558px;
+    top: 889px;
+    width: 219px;
   }
 
   @include for-desktop-only {
-    left: 30px;
-    top: 30px;
+    left: 800px;
+    top: 1205px;
   }
 
   @include for-widescreen {
-    left: 30px;
-    top: 10px;
+    left: 1070px;
+    top: 1230px;
   }
 
   @include for-fullhd {
-    left: 20px;
-    top: 20px;
+    left: 1070px;
+    top: 1190px;
   }
 
   @include for-ultrahd {
-    left: 2vw;
-    top: 3vw;
+    left: 1810px;
+    top: 1180px;
   }
 }
 
@@ -912,37 +991,38 @@ main {
   left: 140px;
   top: -140px;
   position: absolute;
-  transform: scale(1.1);
+  // transform: scale(1.1);
 
   @include for-phone {
-    left: 30px;
-    top: -105px;
-    transform: scale(.9);
+    left: 276px;
+    top: 524px;
+    width: 125px;
   }
 
   @include for-tablet {
-    left: 50px;
-    top: -100px;
+    left: 299px;
+    top: 1090px;
+    width: 235px;
   }
 
   @include for-desktop-only {
-    left: 70px;
-    top: -30px;
+    left: 430px;
+    top: 1470px;
   }
 
   @include for-widescreen {
-    left: 110px;
-    top: -120px;
+    left: 710px;
+    top: 1490px;
   }
 
   @include for-fullhd {
-    left: 120px;
-    top: -140px;
+    left: 710px;
+    top: 1450px;
   }
 
   @include for-ultrahd {
-    left: 7.2vw;
-    top: -7vw;
+    left: 1455px;
+    top: 1450px;
   }
 }
 
@@ -952,7 +1032,7 @@ main {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  transform: scale(1.1);
+  // transform: scale(1.1);
   z-index: 2;
 
   &:hover {
@@ -960,34 +1040,35 @@ main {
   }
 
   @include for-phone {
-    left: 30px;
-    top: -105px;
-    transform: scale(.9);
+    left: 276px;
+    top: 524px;
+    width: 125px;
   }
 
   @include for-tablet {
-    left: 50px;
-    top: -100px;
+    left: 299px;
+    top: 1090px;
+    width: 235px;
   }
 
   @include for-desktop-only {
-    left: 70px;
-    top: -30px;
+    left: 430px;
+    top: 1470px;
   }
 
   @include for-widescreen {
-    left: 110px;
-    top: -120px;
+    left: 710px;
+    top: 1490px;
   }
 
   @include for-fullhd {
-    left: 120px;
-    top: -140px;
+    left: 710px;
+    top: 1450px;
   }
 
   @include for-ultrahd {
-    left: 7.2vw;
-    top: -7vw;
+    left: 1455px;
+    top: 1450px;
   }
 }
 
@@ -995,41 +1076,38 @@ main {
   left: 30px;
   top: 160px;
   position: absolute;
-  transform: scale(1.2);
+  // transform: scale(1.2);
 
   @include for-phone {
-    left: 7px;
-    top: 5px;
-    transform: scale(1);
+    left: 399px;
+    top: 622px;
+    width: 128px;
   }
-
-  @include for-desktop-only {
-    left: 30px;
-    top: 150px;
-  }
-
+  
   @include for-tablet {
-    left: 27px;
-    top: 120px;
+    left: 538px;
+    top: 1290px;
+    width: 257px;
+  }
+  
+  @include for-desktop-only {
+    left: 770px;
+    top: 1750px;
   }
 
   @include for-widescreen {
-    left: 30px;
-    top: 129px;
+    left: 1045px;
+    top: 1760px;
   }
 
   @include for-fullhd {
-    left: 30px;
-    top: 140px;
+    left: 1045px;
+    top: 1720px;
   }
 
   @include for-ultrahd {
-    left: 1vw;
-    top: 8vw;
-  }
-
-  @include for-tablet-landscape {
-    top: 170px;
+    left: 1785px;
+    top: 1725px;
   }
 }
 
@@ -1039,7 +1117,7 @@ main {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  transform: scale(1.2);
+  // transform: scale(1.2);
   z-index: 2;
 
   &:hover {
@@ -1047,38 +1125,35 @@ main {
   }
 
   @include for-phone {
-    left: 7px;
-    top: 5px;
-    transform: scale(1);
+    left: 399px;
+    top: 622px;
+    width: 128px;
   }
 
   @include for-tablet {
-    left: 27px;
-    top: 120px;
+    left: 538px;
+    top: 1290px;
+    width: 257px;
   }
 
   @include for-desktop-only {
-    left: 30px;
-    top: 150px;
+    left: 770px;
+    top: 1750px;
   }
 
   @include for-widescreen {
-    left: 30px;
-    top: 129px;
+    left: 1045px;
+    top: 1760px;
   }
 
   @include for-fullhd {
-    left: 30px;
-    top: 140px;
+    left: 1045px;
+    top: 1720px;
   }
 
   @include for-ultrahd {
-    left: 1vw;
-    top: 8vw;
-  }
-
-  @include for-tablet-landscape {
-    top: 170px;
+    left: 1785px;
+    top: 1725px;
   }
 }
 
@@ -1088,34 +1163,35 @@ main {
   position: absolute;
 
   @include for-phone {
-    left: -10px;
-    top: -120px;
-    transform: scale(.75);
+    left: 249px;
+    top: 671px;
+    width: 102px;
   }
 
   @include for-tablet {
-    left: -33px;
-    top: -95px;
+    left: 231px;
+    top: 1395px;
+    width: 202px;
   }
 
   @include for-desktop-only {
-    left: 0px;
-    top: -10px;
+    left: 340px;
+    top: 1880px;
   }
 
   @include for-widescreen {
-    left: 0;
-    top: -120px;
+    left: 620px;
+    top: 1900px;
   }
 
   @include for-fullhd {
-    left: 10px;
-    top: -180px;
+    left: 620px;
+    top: 1860px;
   }
 
   @include for-ultrahd {
-    left: 2vw;
-    top: -9vw;
+    left: 1360px;
+    top: 1860px;
   }
 }
 
@@ -1132,34 +1208,35 @@ main {
   }
 
   @include for-phone {
-    left: -10px;
-    top: -120px;
-    transform: scale(.75);
+    left: 249px;
+    top: 671px;
+    width: 102px;
   }
 
   @include for-tablet {
-    left: -33px;
-    top: -95px;
+    left: 231px;
+    top: 1395px;
+    width: 202px;
   }
 
   @include for-desktop-only {
-    left: 0px;
-    top: -10px;
+    left: 340px;
+    top: 1880px;
   }
 
   @include for-widescreen {
-    left: 0;
-    top: -120px;
+    left: 620px;
+    top: 1900px;
   }
 
   @include for-fullhd {
-    left: 10px;
-    top: -180px;
+    left: 620px;
+    top: 1860px;
   }
 
   @include for-ultrahd {
-    left: 2vw;
-    top: -9vw;
+    left: 1360px;
+    top: 1860px;
   }
 }
 
